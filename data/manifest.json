@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "seed": 20261003,
+  "start_day": "2026-09-24",
+  "days": 7,
+  "raw_order_rows": 935,
+  "distinct_order_ids": 755,
+  "valid_dwd_orders": 734,
+  "raw_event_rows": 2824,
+  "distinct_event_ids": 2756,
+  "valid_dwd_events": 2742,
+  "daily_metric_rows": 7
+}
