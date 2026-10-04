@@ -102,19 +102,8 @@ docker compose exec -T hive beeline -u 'jdbc:hive2://localhost:10000/' -e 'USE h
 docker compose exec -T hive beeline -u 'jdbc:hive2://localhost:10000/' -f /project/sql/08_explain.sql
 ```
 
-## 没有本地 Docker 时：用 GitHub Actions 验证
 
-将 `.github/workflows/hive-e2e.yml` 一并上传到仓库。进入 GitHub 仓库的 **Actions → Hive end-to-end check → Run workflow**。绿色通过后再把 README 顶部的状态改成“已在 GitHub Actions 的 Hive 4.0.0 容器完成端到端验证”，并保留该次运行链接。工作流会执行数据生成、本地逻辑校验、Hive 读写、数据质量断言及逐日指标对照。若运行失败，先查看失败步骤和 Hive 日志，不要把未通过的流程写成已验证。
 
-## 求职时怎么讲
-
-1. 为什么 DWD 要先按 `order_id` 取最新版本，再做质量过滤？如果先过滤，坏的最新记录可能让旧状态重新出现。
-2. 为什么 DWD/DWS 按 `dt` 分区，写入时用 `INSERT OVERWRITE ... PARTITION (dt)`？如何限定一次重算涉及的日期？
-3. 为什么付费转化率要把“当天活跃用户”和“当天付费用户”按用户与日期关联？
-4. 次日收到退款记录，原下单日的 GMV 如何回刷？
-5. 本地 SQLite 验证覆盖了什么，尚未覆盖什么？
-
-可复制的简历描述在 [`docs/resume-copy.md`](docs/resume-copy.md)。
 
 ## 资料
 
