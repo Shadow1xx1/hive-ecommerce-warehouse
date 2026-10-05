@@ -2,7 +2,7 @@
 
 一个用于求职展示的个人练习项目：用 **7 天可复现的模拟订单与用户行为数据**，编写 ODS → DWD → DWS → ADS 的 HiveQL 流水线，并核对 DAU、付费用户、订单数、GMV、付费转化率和三日滚动 GMV。
 
-> **验证状态（2026-10-04）**：已运行 `scripts/validate_local.py`，用 SQLite 执行仓库中 Hive SQL 的 `SELECT` 部分，并与独立生成的预期指标核对通过。当前机器没有 Docker/Hive；`CREATE TABLE`、`LOAD DATA`、`INSERT OVERWRITE` 和实际分区行为**尚未在 Hive 中端到端运行**。仓库提供 GitHub Actions 流程，上传后可在 GitHub 的运行环境完成这一步。因此本项目暂不宣称 Hive 实测通过、上线或性能提升。
+
 
 ## 项目结构
 
